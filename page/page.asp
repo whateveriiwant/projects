@@ -21,9 +21,16 @@
     <script language="javascript">
         function showPopup() { window.open("popup.html", "a", "width=400, height=300, left=100, top=50"); }
         </script>
+        
+        <style>
+      table,tr,td{
+      border-collapse : collapse;
+      border : 1px solid black;
+      }
+      </style>
 </head>
 <body>
-    <table border="1">
+    <table>
         <tr>
             <td>분류id</td>
             <td>학년</td>

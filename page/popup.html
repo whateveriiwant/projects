@@ -5,6 +5,14 @@
     
     <title>popup</title>
 
+    <style>
+        table{
+            margin: 0 auto;
+        }
+        .submit{
+            text-align: right;
+        }
+    </style>
     
 </head>
 
@@ -12,7 +20,8 @@
     <form name="form1" action="db.asp" method="POST">
         <table>
             <tr>
-                <td>분류id</td> <td><input type="text" name="sort"></td>
+                <td><input type="radio" name="sort" value="2021-1">2021년 1학기</td>
+                <td><input type="radio" name="sort" value="2021-2">2021년 2학기</td>
             </tr>
             <tr>
                 <td>학년</td> <td><input type="text" name="syear"></td>
@@ -32,9 +41,12 @@
             <tr>
                 <td>석차</td> <td><input type="text" name="place"></td>
             </tr>
+            <tr>
+                <td></td><td class="submit"><input type="submit" value="제출"></td>
+            </tr>
         </table>
 
-        <input type="submit" value="저장">
+        
     </form>
 
 </body>
