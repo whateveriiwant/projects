@@ -26,11 +26,17 @@
       table,tr,td{
       border-collapse : collapse;
       border : 1px solid black;
+      margin: 0 auto;
       }
+
+      .magin{
+          margin:0 auto;
+        }
       </style>
 </head>
 <body>
-    <table>
+    <h1 align="center">교과 우수상 입력</h1>
+    <table align="center">
         <tr>
             <td>분류id</td>
             <td>학년</td>
@@ -51,15 +57,7 @@
 
             DO UNTIL rs.eof
 
-                    response.Write "<tr>"
-                    response.Write "<td>" & rs("분류id") & "</td>"
-                    response.Write "<td>" & rs("학년") & "</td>"
-                    response.Write "<td>" & rs("교과명") & "</td>"
-                    response.Write "<td>" & rs("학번") & "</td>"
-                    response.Write "<td>" & rs("이름") & "</td>"
-                    response.Write "<td>" & rs("원점수") & "</td>" 
-                    response.Write "<td>" & rs("석차") & "</td>" 
-                    response.Write "</tr>"
+                    response.Write "<tr>" & "<td>" & rs("분류id") & "</td>" & "<td>" & rs("학년") & "</td>" & "<td>" & rs("교과명") & "</td>" & "<td>" & rs("학번") & "</td>" & "<td>" & rs("이름") & "</td>" & "<td>" & rs("원점수") & "</td>" & "<td>" & rs("석차") & "</td>" & "</tr>"
 
             rs.movenext
             
