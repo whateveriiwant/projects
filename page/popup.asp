@@ -41,7 +41,7 @@
         db.open("DSN=sukjimanghera; UID=; PW=")
 
     
-        sql = "select 과목명 from subject_info where 학년='1'"
+        sql = "select 과목명 from 교과정보 where 학년='1'"
         set rs = db.execute(sql)
 
         db.close

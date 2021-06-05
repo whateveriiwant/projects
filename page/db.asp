@@ -30,10 +30,10 @@
 
     <%
         set db  = server.createobject("ADODB.Connection")
-        db.open("DSN=sukji; UID=; PW=")
+        db.open("DSN=sukjimanghera; UID=; PW=")
 
 
-        sql = "insert into subject values('" & sort1 & "', '" & syear1 & "', '" & sub1 & "', '" & number1 & "', '" & sname1 & "', '" & score1 & "', '" & place1 & "')"
+        sql = "insert into 교과우수상 values('" & sort1 & "', '" & syear1 & "', '" & sub1 & "', '" & number1 & "', '" & sname1 & "', '" & score1 & "', '" & place1 & "')"
         db.execute(sql)
 
         db.close

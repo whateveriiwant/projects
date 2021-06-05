@@ -78,7 +78,7 @@
                 set db=server.createobject("ADODB.Connection")
                 db.open("DSN=sukjimanghera;UID=;PW=;")
                 
-                sql = "select * from subject"
+                sql = "select * from 교과우수상"
 
                 set rs = db.execute(sql)
 
