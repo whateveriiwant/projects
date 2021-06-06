@@ -76,7 +76,7 @@
 
             <%
                 set db=server.createobject("ADODB.Connection")
-                db.open("DSN=sukjimanghera;UID=;PW=;")
+                db.open("DSN=dbs;UID=;PW=;")
                 
                 sql = "select * from 교과우수상"
 

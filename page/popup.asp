@@ -22,8 +22,6 @@
         margin-top: 30px
     }
 
-
-
         input[type="submit"] {
             width: 330px;
             height: 30px;
@@ -38,13 +36,14 @@
     %>
     <%
         set db  = server.createobject("ADODB.Connection")
-        db.open("DSN=sukjimanghera; UID=; PW=")
+        db.open("DSN=dbs; UID=; PW=")
 
     
-        sql = "select 과목명 from 교과정보 where 학년='1'"
+        sql = "select 교과명 from 교과정보 where 학년='1'"
+        
         set rs = db.execute(sql)
 
-        db.close
+        'db.close
         
     %>
     <form name="form1" action="bd.asp" method="POST">
@@ -56,12 +55,7 @@
                 <td>학년</td> <td><input type="text" name="year2" value="<% Response.Write year1 %>"></td>
             </tr>
             <tr>
-                <td>교과명</td> <td><% 
-             
-                     response.Write rs("과목명")
-                
-                
-                 %></td>
+                <td>교과명</td> <td><% response.Write rs("교과명") %></td>
             </tr>
             <tr>
                 <td>학번</td> <td><input type="text" name="number"></td>
@@ -79,10 +73,7 @@
                 <td colspan="2"><input type="submit" value="저장" width="100"></td>
             </tr>
         </table>
-        
-
-        
     </form>
-
+    
 </body>
 </html>

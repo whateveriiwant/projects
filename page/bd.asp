@@ -38,7 +38,7 @@
     %>
     <%
         set db  = server.createobject("ADODB.Connection")
-        db.open("DSN=sukjimanghera; UID=; PW=")
+        db.open("DSN=dbs; UID=; PW=")
 
 
         sql = "insert into 교과우수상 values('" & sort1_write & "', '" & syear1 & "', '" & sub1 & "', '" & number1 & "', '" & sname1 & "', '" & score1 & "', '" & place1 & "')"
