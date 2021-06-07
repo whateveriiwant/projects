@@ -34,18 +34,17 @@
     <%
         year1 = Request.Form("year")
     %>
+
     <%
         set db  = server.createobject("ADODB.Connection")
         db.open("DSN=dbs; UID=; PW=")
 
-    
-        sql = "select 교과명 from 교과정보 where 학년='1'"
         
-        set rs = db.execute(sql)
-
-        'db.close
+        sql = "select 교과명 from 교과정보 where 학년='" & year1 & "'" 
         
+        set rs = db.execute(sql)  
     %>
+
     <form name="form1" action="bd.asp" method="POST">
         <table id="center">
             <tr>
@@ -55,7 +54,15 @@
                 <td>학년</td> <td><input type="text" name="year2" value="<% Response.Write year1 %>"></td>
             </tr>
             <tr>
-                <td>교과명</td> <td><% response.Write rs("교과명") %></td>
+                <td>교과명</td> <td>
+                    <select name="subjectn">
+                        <% DO UNTIL rs.eof
+                            response.Write "<option value=" & rs("교과명") & ">" & rs("교과명") & "</option>" 
+                            rs.movenext
+                            LOOP
+                        %>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>학번</td> <td><input type="text" name="number"></td>

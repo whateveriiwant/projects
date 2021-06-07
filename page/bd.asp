@@ -21,7 +21,7 @@
     <%
         sort1=Request.Form("sort")
         syear1=Request.Form("year2")
-        sub1=Request.Form("sub")
+        sub1=Request.Form("subjectn")
         number1=Request.Form("number")
         sname1=Request.Form("sname")
         score1=Request.Form("score")
@@ -29,21 +29,17 @@
     %>
 
    <%
-        Dim sort1_write
-        if sort1 = "1" then
-            sort1_write = Replace(sort1, "1", "2021년 1학기")
-        elseif sort1 = "2" then
-            sort1_write = Replace(sort1, "2", "2021년 2학기")
-        end if
+        
     %>
     <%
         set db  = server.createobject("ADODB.Connection")
         db.open("DSN=dbs; UID=; PW=")
 
 
-        sql = "insert into 교과우수상 values('" & sort1_write & "', '" & syear1 & "', '" & sub1 & "', '" & number1 & "', '" & sname1 & "', '" & score1 & "', '" & place1 & "')"
+        sql = "insert into 교과우수상 values('" & sort1 & "', '" & syear1 & "', '" & sub1 & "', '" & number1 & "', '" & sname1 & "', '" & score1 & "', '" & place1 & "')"
         db.execute(sql)
 
+        
         db.close
         response.redirect "result.html"
     %>
