@@ -19,7 +19,7 @@
 </head>
 <body>
     <%
-        sort1=Request.Form("sort")
+        sort1=Request.Form("term2")
         syear1=Request.Form("year2")
         sub1=Request.Form("subjectn")
         number1=Request.Form("number")
@@ -28,9 +28,7 @@
         place1=Request.Form("place")
     %>
 
-   <%
-        
-    %>
+
     <%
         set db  = server.createobject("ADODB.Connection")
         db.open("DSN=dbs; UID=; PW=")

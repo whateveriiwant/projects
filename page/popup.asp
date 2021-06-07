@@ -33,6 +33,7 @@
 <body>
     <%
         year1 = Request.Form("year")
+        term1 = Request.Form("term")
     %>
 
     <%
@@ -48,7 +49,7 @@
     <form name="form1" action="bd.asp" method="POST">
         <table id="center">
             <tr>
-                <td>학년도/학기</td> <td><input type="radio" name="sort" value="1">2021년 1학기 <input type="radio" name="sort" value="2">2021년 2학기</td>
+                <td>학년도/학기</td> <td><input type="text" name="term2" value="<% Response.Write term1 %>"></td>
             </tr>
             <tr>
                 <td>학년</td> <td><input type="text" name="year2" value="<% Response.Write year1 %>"></td>

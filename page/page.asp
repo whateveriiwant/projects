@@ -60,6 +60,10 @@
             <option value=2학년>2학년
             <option value=3학년>3학년
         </select>
+        <select name=term>
+            <option value="2021년 1학기">2021년 1학기
+            <option value="2021년 2학기">2021년 2학기
+        </select>
         <div class="input">
             <input type="submit" value="입력" >
         </div>
